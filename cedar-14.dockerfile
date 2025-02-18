@@ -1,5 +1,4 @@
 FROM heroku/cedar:14
-MAINTAINER Akash Manohar
 
 RUN sed -i '/^deb http:\/\/apt\.postgresql\.org\/*/d' /etc/apt/sources.list
 RUN apt-get update

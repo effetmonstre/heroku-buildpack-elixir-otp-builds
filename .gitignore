@@ -1,1 +1,4 @@
 builds
+otp-*
+.vscode
+*.DS_Store

@@ -1,11 +1,13 @@
-FROM heroku/heroku:16
+FROM heroku/heroku:24
+
+USER root
 
 RUN apt-get update
 
 RUN apt-get install -y curl wget ca-certificates
 RUN apt-get install -y gcc g++
 RUN apt-get install -y make automake autoconf
-RUN apt-get install -y libwxgtk3.0-dev libgl1-mesa-dev libglu1-mesa-dev libpng3
+RUN apt-get install -y libwxgtk3.2-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev
 RUN apt-get install -y libreadline-dev libncurses-dev libssl-dev libssh-dev
 RUN apt-get install -y libxslt-dev libffi-dev libtool unixodbc-dev
 RUN apt-get install -y fop xsltproc
