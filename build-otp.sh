@@ -17,14 +17,14 @@ else
 
   cd $OTP_UNTAR_DIR
 
-  ./otp_build autoconf
+  ./otp_build
   ./configure --with-ssl --enable-dirty-schedulers
   make
   make release
 
   cd ../
   # mv otp-OTP-${OTP_VERSION}/release/x86_64-unknown-linux-gnu/ OTP-${OTP_VERSION}
-  mv otp-OTP-${OTP_VERSION}/release//x86_64-pc-linux-gnu/ OTP-${OTP_VERSION} # Ubuntu 24.04
+  mv otp-OTP-${OTP_VERSION}/release/x86_64-pc-linux-gnu/ OTP-${OTP_VERSION} # Ubuntu 24.04
   # mv otp-OTP-${OTP_VERSION}/release/aarch64-unknown-linux-gnu/ OTP-${OTP_VERSION} #OSX
   rm OTP-${OTP_VERSION}.tar.gz
   tar -zcf out/OTP-${OTP_VERSION}.tar.gz OTP-${OTP_VERSION}
